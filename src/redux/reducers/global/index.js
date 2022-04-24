@@ -1,7 +1,9 @@
-export const globalReducer = (state = { data: null }, action) => {
+import { GET_PEOPLE_DATA } from "../../constants";
+
+export const globalReducer = (state = { peoplesdata: null }, action) => {
   switch (action.type) {
-    case 1:
-      return { ...state, allTrialSessions: action?.data };
+    case GET_PEOPLE_DATA:
+      return { ...state, peoplesdata: action?.data };
     default:
       return state;
   }
